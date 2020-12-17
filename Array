@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+
+	int i, j, v;
+	int num[5][6];
+
+	void set(int i, int j) {
+		for (i = 0; i < 5; i++)
+
+		{
+
+			for (j = 0; j < 6; j++)
+
+			{
+
+			      num[i][j] = (j * 4) + i + 1; // 填入二維陣列值
+
+			}
+			
+		}
+		
+	}
+
+	void get(int i, int j) {
+		cout << "num[" << i << "][" << j << "] = " << num[i][j] << endl;
+	}
+
+	void dump(int i, int j) {
+
+		cout << "num["<<i<<"]"<<"["<<j<<"]=" <<  (j * 4) + i + 1 << endl;
+		
+		cout << "num[i][j]=[v],""num" << "["<<i<<"]" << "[" << j << "]" << "=" << (j * 4) + i + 1;
+	}
+	int main() {
+		int i, j;
+		cout << "请输入两个数值" << endl;
+		cin >> i >> j;
+		set(i, j);
+		get(i, j);
+		dump(i, j);
+		system("pause");
+		return 0;
+		
+		}
